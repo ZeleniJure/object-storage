@@ -156,7 +156,7 @@ func findMinio() []*instance {
 	ctxTimeout, _ := context.WithTimeout(context.Background(), time.Second*10)
 	containers, err := apiClient.ContainerList(ctxTimeout, container.ListOptions{})
 	if err != nil {
-		panic(err)
+		log.Panic().Err(err).Msg("Problem trying to list containers")
 	}
 
 	var instances []*instance

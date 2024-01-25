@@ -1,6 +1,6 @@
 module github.com/ZeleniJure/object-storage
 
-go 1.18
+go 1.21
 
 require (
 	github.com/docker/docker v25.0.0+incompatible
