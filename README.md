@@ -4,7 +4,11 @@ The gateway will store and retrieve objects on a set of minio instances running 
 - listening on port 3000/http by default
 - **PUT** */object/{id}* - create new object with the specified ID and content body
 - **GET** */object/{id}* - returns object content, or 400 if id doesn't exist.
-- *id* is the name of the object, and can be kind of whatever minio accepts. Folders aren't supported though.
+- content types are not handled by the application
+- *id* is the name of the object, and can be kind of whatever minio accepts.
+
+Keep in mind that the *id* also defines which backing storage the object is stored to, having similar
+*id*s stored to different backends.
 
 ## Quick start:
 Assuming docker is installed, the following should:
